@@ -47,21 +47,14 @@ class House:
 
     def __add__(self, value):
         if isinstance(value, int):
-            self.number_of_floors += value
-            return self
+            return House(self.name, self.number_of_floors + value)
         print(f'{type(value).__name__} is not int type.')
 
-    def __iadd__(self, other):
-        if isinstance(other, int):
-            self.number_of_floors += other
-            return self
-        print(f'{type(other).__name__} is not int type.')
+    def __iadd__(self, value):
+        return self.__add__(value)
 
-    def __radd__(self, other):
-        if isinstance(other, int):
-            self.number_of_floors += other
-            return self
-        print(f'{type(other).__name__} is not int type.')
+    def __radd__(self, value):
+        return self.__add__(value)
 
 
 h1 = House('ЖК "Альбатрос"', 10)
