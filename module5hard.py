@@ -31,7 +31,7 @@ class UrTube:
                 print(f'Вы успешно авторизовались! ')
                 return
 
-        print(f'Пользователь с таким логином и паролем не найден! ')
+        print(f'Пара значений логин и пароль не верная! ')
 
     def register(self, nickname, password, age):
         if any(user.nickname == nickname for user in self.users):
@@ -81,7 +81,6 @@ class UrTube:
                         print('\nКонец видео')
                         video.time_now = 0
                         return
-
             print(f'Видео с таким названием не найдено!')
         elif self.current_user is None:
             print(f'Войдите в аккаунт, чтобы смотреть видео!')
