@@ -18,7 +18,6 @@ class Mammal(Animal):
 
 
 class Predator(Animal):
-
     def __init__(self, name):
         self.name = name
 
@@ -29,13 +28,11 @@ class Plant:
 
 
 class Flower(Plant):
-
     def __init__(self, name):
         self.name = name
 
 
 class Fruit(Plant):
-
     def __init__(self, name):
         self.edible = True
         self.name = name
