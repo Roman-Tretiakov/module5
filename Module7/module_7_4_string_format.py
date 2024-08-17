@@ -22,7 +22,7 @@ def challenge_result(name1, score1, time1, name2, score2, time2):
     print('\nКоманда "{name}" решила задач: {score} !'.format(name=name2, score=score2))
     print('{} решили задачи за {} с !'.format(name2, time2))
     print(f'В среднем, по {time2 / score2} секунды на задачу')
-    print(f'Сегодня было решено {score1 + score2} задач, '
+    print(f'\nСегодня было решено {score1 + score2} задач, '
           f'в среднем по {(time1 + time2) / (score1 + score2)} секунды на задачу!')
 
     if score1 > score2 or score1 == score2 and time1 < time2:
