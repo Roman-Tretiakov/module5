@@ -3,9 +3,12 @@ def add_everything_up(a, b):
         a + b
     except TypeError as err:
         print(f'Возникла ошибка: {err}. Тип первого аргумента: {type(a)}, тип второго аргумента: {type(b)}')
-        return f'{str(a)}{str(b)}'
+        return f'{str(a)}{str(b)}\n'
     else:
-        return round(a + b, 3)
+        if type(a) and type(b) is int:
+            return round(a + b, 3)
+        else:
+            return a + b
     finally:
         if type(a) is int and type(b) is str:
             print(f'Эта функция может также складывать числа и строки, результат: {a + len(b)}')
