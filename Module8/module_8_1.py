@@ -3,7 +3,7 @@ def add_everything_up(a, b):
         a + b
     except TypeError as err:
         print(f'Возникла ошибка: {err}. Тип первого аргумента: {type(a)}, тип второго аргумента: {type(b)}')
-        return f'{str(a)}{str(b)}'
+        return f'{str(a)}{str(b)}\n'
     else:
         return round(a + b, 3)
     finally:
