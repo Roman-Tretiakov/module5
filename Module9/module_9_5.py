@@ -33,7 +33,7 @@ class Iterator:
                 if self.pointer < self.stop:
                     raise StopIteration
                 return self.pointer
-        self.s -= 1
+        self.s += 1
         return self.start
 
 
