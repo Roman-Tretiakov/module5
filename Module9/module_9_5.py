@@ -6,11 +6,11 @@ class Iterator:
 
     def __init__(self, start=0, stop=100, step=1):
         self.start, self.stop = start, stop
+        self.pointer = self.start
         if step == 0:
             raise StepValueError('Шаг не может быть равен 0')
         else:
             self.step = step
-        self.pointer = self.start
 
     def __iter__(self):
         self.pointer, self.s = self.start, self.start
