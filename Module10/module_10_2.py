@@ -8,10 +8,6 @@ class Knight(Thread):
         super().__init__()
         self.name = name
         self.power = power
-        if type(name) is not str:
-            raise ValueError(f'name must be string')
-        if type(power) is not int:
-            raise ValueError(f'power must be int')
 
     def run(self):
         enemy_count = 100
