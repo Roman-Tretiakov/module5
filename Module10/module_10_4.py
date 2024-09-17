@@ -47,10 +47,9 @@ class Cafe:
                     table.guest = None
 
                     if not self.queue.empty():
-                        next_guest = self.queue.get()
-                        table.guest = next_guest
-                        next_guest.start()
-                        print(f"{next_guest.name} вышел(-ла) из очереди и сел(-а) за стол номер {table.number}")
+                        table.guest = self.queue.get()
+                        table.guest.start()
+                        print(f"{table.guest.name} вышел(-ла) из очереди и сел(-а) за стол номер {table.number}")
 
 
 # Создание столов
