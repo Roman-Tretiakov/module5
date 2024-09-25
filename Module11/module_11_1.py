@@ -55,7 +55,7 @@ def pillow_work():
 
     image = image.resize((800, 600))
 
-    image = image.filter(ImageFilter.BLUR)
+    image = image.filter(ImageFilter.GaussianBlur(radius=10))
 
     draw_image = ImageDraw.Draw(image)
     font = ImageFont.truetype('a_Albionic.ttf', 36)
